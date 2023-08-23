@@ -23,9 +23,10 @@ export default function Onboarding() {
             <div style={{ margin: 32 }}>
                 <div id="swap_widget" />
             </div>
+            {/*Please visit the https://docs.mayan.finance/integration/swap-widget for the latest version */}
             <Script
-                src="https://cdn.mayan.finance/widget_ultimate-0-4-4.js"
-                integrity="sha256-mTVQLKvE422WDwtZQUcz/9u5ZK3T1vMfSO0omQvla0E="
+                src="https://cdn.mayan.finance/widget_ultimate-0-4-5.js"
+                integrity="sha256-Dem40VAlLsczlbgJyd9U20HCZiihA1UFQy96wdDqVYQ="
                 crossOrigin="anonymous"
                 onReady={handleLoadMayanWidget}
             />

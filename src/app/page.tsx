@@ -13,6 +13,11 @@ export default function Home() {
           <span style={{ fontWeight: 'bold', color: 'teal' }} >Go to Onboarding Page</span>
         </Link>
       </div>
+        <div>
+            <Link href="/widget-solana">
+                <span style={{ fontWeight: 'bold', color: 'teal' }} >Do you have dApp? click me</span>
+            </Link>
+        </div>
     </main>
   )
 }

@@ -40,7 +40,7 @@ const MayanWidgetSolana = () => {
     const {publicKey, signTransaction, connect, disconnect, wallet, wallets, connected, select} = useWallet();
     const {setVisible, visible} = useWalletModal();
 
-    const handleConnect = useCallback(async () => {
+    const handleConnect = async () => {
         try {
             if (!wallet) {
                 setVisible(!visible);
@@ -50,7 +50,7 @@ const MayanWidgetSolana = () => {
         } catch (err) {
             console.error(err);
         }
-    }, [connect, setVisible, wallet, visible, publicKey]);
+    };
 
 
     useEffect(() => {
@@ -62,7 +62,7 @@ const MayanWidgetSolana = () => {
                 onClickOnDisconnect: disconnect,
             })
         }
-    }, [publicKey, signTransaction, handleConnect, disconnect]);
+    }, [publicKey, signTransaction, disconnect, setVisible, visible, wallet, connect]);
 
     const handleLoadMayanWidget = () => {
         const config = {
@@ -83,6 +83,7 @@ const MayanWidgetSolana = () => {
             <div style={{margin: 32}}>
                 <div id="swap_widget"/>
             </div>
+
             <Script
                 src="https://cdn.mayan.finance/widget_solana-0-4-5.js"
                 integrity="sha256-mTVQLKvE422WDwtZQUcz/9u5ZK3T1vMfSO0omQvla0E="
